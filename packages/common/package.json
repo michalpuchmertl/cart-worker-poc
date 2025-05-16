@@ -1,0 +1,13 @@
+{
+  "name": "@cart-poc/common",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc -w"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.3"
+  }
+}

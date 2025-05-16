@@ -1,0 +1,21 @@
+{
+  "extends": "../../packages/common/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@cart-poc/common/*": ["../../packages/common/src/*"]
+    },
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/server.ts", "src/cart-worker-utils.ts"],
+  "exclude": ["node_modules", "dist", "src/cart-worker.ts"],
+  "references": [{ "path": "../../packages/common" }]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@cart-poc/worker",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/server.js",
+  "scripts": {
+    "dev:build-worker": "tsc -p tsconfig.worker.json -w",
+    "dev:build-server": "tsc -p tsconfig.server.json -w",
+    "dev:server": "nodemon dist/server.js",
+    "dev": "concurrently -n \"WORKER_TS,SERVER_TS,WORKER_SRV\" -c \"bgYellow.bold,bgBlue.bold,bgCyan.bold\" \"pnpm dev:build-worker\" \"pnpm dev:build-server\" \"pnpm dev:server\""
+  },
+  "dependencies": {
+    "@cart-poc/common": "workspace:*",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/cors": "~2.8.17",
+    "@types/express": "~4.17.21",
+    "@types/node": "~20.12.12",
+    "concurrently": "~8.2.2",
+    "nodemon": "~3.1.0",
+    "typescript": "~5.8.3"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "cart-poc",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"COMMON,WORKER_APP,BACKEND,FRONTEND\" -c \"bgMagenta.bold,bgCyan.bold,bgBlue.bold,bgGreen.bold\" \"pnpm --filter @cart-poc/common dev\" \"pnpm --filter @cart-poc/worker dev\" \"pnpm --filter @cart-poc/backend dev\" \"pnpm --filter @cart-poc/frontend dev\""
+  },
+  "devDependencies": {
+    "concurrently": "~8.2.2",
+    "typescript": "~5.8.3"
+  }
+}
